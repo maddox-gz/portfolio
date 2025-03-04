@@ -6,12 +6,19 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Header -->
   <header>
     <nav>
-      <ul>
+      <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Ongoing Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
@@ -74,7 +81,7 @@
 
   <!-- Social Media Links -->
   <div class="social-links">
-    <a href="https://github.com/maddox-gz" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
     <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
   </div>
@@ -84,13 +91,20 @@
     <p>&copy; 2025 Maddox. All rights reserved.</p>
   </footer>
 
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-  <!-- JavaScript for Dark Mode Toggle -->
+  <!-- JavaScript for Dark Mode Toggle and Hamburger Menu -->
   <script>
+    // Dark Mode Toggle
     const themeToggle = document.getElementById('theme-toggle');
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
+    });
+
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
     });
   </script>
 </body>
