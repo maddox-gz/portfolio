@@ -19,6 +19,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <button id="theme-toggle">Toggle Theme</button>
   </header>
 
   <!-- Home Section -->
@@ -85,6 +86,12 @@
 
   <!-- Font Awesome for Icons -->
   <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <!-- JavaScript for Dark Mode Toggle -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
   </script>
 </body>
 </html>
