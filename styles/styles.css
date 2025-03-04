@@ -5,11 +5,24 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #121212;
 }
 
 header {
   background-color: #1f1f1f;
   padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.light-mode {
+  background-color: #f0f0f0;
 }
 
 nav ul {
@@ -26,6 +39,24 @@ nav ul li a {
   font-size: 18px;
 }
 
+body.light-mode nav ul li a {
+  color: #121212;
+}
+
+#theme-toggle {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body.light-mode #theme-toggle {
+  background-color: #ddd;
+  color: #121212;
+}
+
 /* Home Section */
 #home {
   text-align: center;
@@ -38,6 +69,13 @@ nav ul li a {
   align-items: center;
   gap: 40px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .profile-pic img {
@@ -65,14 +103,31 @@ nav ul li a {
   font-size: 16px;
 }
 
+body.light-mode .about-me-button button {
+  background-color: #ddd;
+  color: #121212;
+}
+
 .split-section {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
 }
 
+@media (max-width: 768px) {
+  .split-section {
+    flex-direction: column;
+  }
+}
+
 .left, .right {
   width: 48%;
+}
+
+@media (max-width: 768px) {
+  .left, .right {
+    width: 100%;
+  }
 }
 
 .blog-buttons button {
@@ -87,6 +142,11 @@ nav ul li a {
   text-align: left;
 }
 
+body.light-mode .blog-buttons button {
+  background-color: #ddd;
+  color: #121212;
+}
+
 .blog-buttons button img {
   width: 50px;
   height: 50px;
@@ -94,15 +154,50 @@ nav ul li a {
   vertical-align: middle;
 }
 
-/* Blog Section */
-#blog {
+/* Skills Section */
+#skills {
   padding: 50px 20px;
 }
 
-.blog-posts .post {
-  background-color: #1f1f1f;
-  padding: 20px;
+.skills-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill {
   margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #333;
+  height: 10px;
+  border-radius: 5px;
+}
+
+body.light-mode .progress-bar {
+  background-color: #ddd;
+}
+
+.progress {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Social Media Links */
+.social-links {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.social-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+body.light-mode .social-links a {
+  color: #121212;
 }
 
 /* Footer */
@@ -111,4 +206,8 @@ footer {
   padding: 20px;
   background-color: #1f1f1f;
   margin-top: 50px;
+}
+
+body.light-mode footer {
+  background-color: #f0f0f0;
 }
